@@ -1,0 +1,30 @@
+{
+  "name": "microapps-example",
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "npm i && npm run install:aisp && npm run install:pisp",
+    "install:aisp": "cd ./aisp/ && npm i",
+    "install:pisp": "cd ./pisp/ && npm i",
+    "start:aisp": "cd ./aisp/ && webpack-dev-server --config ./webpack.dev.js --port 8236",
+    "start:pisp": "cd ./pisp/ && webpack-dev-server --config ./webpack.dev.js --port 8237",
+    "build:aisp": "cd ./aisp/ && webpack --config ./webpack.config.js -p",
+    "build:pisp": "cd ./pisp/ && webpack --config ./webpack.config.js -p"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-syntax-dynamic-import": "7.0.0",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "7.7.0",
+    "babel-core": "6.26.3",
+    "babel-loader": "8.0.0",
+    "clean-webpack-plugin": "0.1.19",
+    "concurrently": "4.0.1",
+    "copy-webpack-plugin": "4.5.2",
+    "css-loader": "1.0.0",
+    "style-loader": "0.23.0",
+    "url-loader": "3.0.0",
+    "webpack": "4.17.1",
+    "webpack-cli": "3.1.0",
+    "webpack-dev-server": "^3.1.14"
+  }
+}
